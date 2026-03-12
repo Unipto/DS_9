@@ -21,7 +21,7 @@ fi
   "ml-dtypes==0.5.1"
 
 "$VENV_DIR/bin/pip" install \
-  pillow pandas pyarrow boto3 s3fs fsspec
+  pillow pandas pyarrow boto3 s3fs fsspec seaborn
 
 # --- Kernel Jupyter (sur le master uniquement)
 # EMR expose le rôle dans /mnt/var/lib/info/instance.json
