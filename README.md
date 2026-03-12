@@ -49,10 +49,9 @@ La chaîne de traitement implémentée suit la logique suivante :
 ## Environnement et exécution
 
 Le dépôt contient plusieurs notebooks et scripts utilitaires :
-- [Mode_operatoire/P9_Notebook_Linux_EMR_PySpark_local.ipynb](Mode_operatoire/P9_Notebook_Linux_EMR_PySpark_local.ipynb) : travail et essais en local, avec un dataset réduit ;
-- [Mode_operatoire/P9_Notebook_Linux_EMR_PySpark_remote.ipynb](Mode_operatoire/P9_Notebook_Linux_EMR_PySpark_remote.ipynb) : notebook uploadé sur s3 pour exécution dans le cluster ;
-- [bootstrap-emr.sh](/c:/Applications/Git-OpenClassrooms/DS_9/bootstrap-emr.sh) : bootstrap simple, deprecated ;
-- [bootstrap-emr-venv.sh](/c:/Applications/Git-OpenClassrooms/DS_9/bootstrap-emr-venv.sh) : bootstrap avec environnement Python dédié, installation de TensforFlow incluse dans le bootstrap pour éviter les problèmes de versions avec le TensforFlow fourni par aws lors de la création d'un cluster.
+- Mode_operatoire/P9_Notebook_Linux_EMR_PySpark_local.ipynb : travail et essais en local, avec un dataset réduit ;
+- Mode_operatoire/CARRE_Maxime_1_notebook_032026_remote.ipynb : notebook uploadé sur s3 pour exécution dans le cluster ;
+- bootstrap-emr-venv.sh : bootstrap avec environnement Python dédié, installation de TensforFlow incluse dans le bootstrap pour éviter les problèmes de versions avec le TensforFlow fourni par aws lors de la création d'un cluster.
 
 Le cluster EMR n'est pas maintenu actif en permanence. Il est résilié pour limiter les coûts, mais il peut être recréé par clonage de la configuration existante.
 
@@ -64,4 +63,6 @@ Cette organisation permet de respecter la contrainte budgétaire du projet en r�
 
 ## Pourquoi une phase locale avant EMR
 
-Le notebook fourni étant destiné à un environnement Linux / Spark, les mises au point ont intérêt à être faites localement dans un environnement proche de la cible avant exécution sur AWS. Cela permet de corriger plus vite les erreurs de code et de réduire les coûts cloud. Les opérations en local ont été effectuées sur un dataset de 300 images aléatoires seulement pour gagner du temps, l'objectif étant simplement de valider la logique du process.
+Le notebook fourni étant destiné à un environnement Linux / Spark, les mises au point ont intérêt à être faites localement dans un environnement proche de la cible avant exécution sur AWS. Cela permet de corriger plus vite les erreurs de code et de réduire les coûts cloud. Les opérations en local ont été effectuées sur un dataset de 300 images aléatoires (stockées ) seulement pour gagner du temps, l'objectif étant simplement de valider la logique du process.
+
+Les 300 images utilisées en entrée pour le test en local sont stockées dans le dossier "local_test_data/CARRE_Maxime_2_images_032026_input". Le résultat après PCA est stocké dans "local_test_data/Results"
