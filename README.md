@@ -36,6 +36,8 @@ L'architecture retenue repose sur des services AWS situés en Europe (Paris) afi
 
 ## Pipeline de traitement
 
+Version de Python utilisée : 3.12.3
+
 La chaîne de traitement implémentée suit la logique suivante :
 - lecture des images et des labels ;
 - extraction de features via **MobileNetV2** ;
